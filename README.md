@@ -8,6 +8,10 @@ App Storeで公開しているiOSアプリ「ビーコンワークショップ�
 * [使い方マニュアル](manual.md)
 * [インポートデータ仕様](Definitions.md)
 
+#####コンテンツアーカイブ
+* [アプリの初期コンテンツ(DefaultContents.zip)](DefaultContents.zip)
+* [テンプレート用(Template.zip)](Template.zip)
+
 #####リンク
 - [ビーコンワークショップ 有料版](https://itunes.apple.com/jp/app/bikonwakushoppu/id908171923?mt=8)
 - [ビーコンワークショップLite](https://itunes.apple.com/jp/app/bikonwakushoppu-lite/id908172593?mt=8)
