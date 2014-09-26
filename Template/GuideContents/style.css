@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html,
+body,
+h1,
+p{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: normal;
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color:#858585;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+img{
+	border:none;
+}
+
+section h1{
+ 	margin: 20px 20px 10px;	
+	font-size:20px;	
+	 color:#999;
+}
+
+section h2{
+ 	margin: 20px 20px 10px;	
+	font-size:18px;	
+	color:#F66;
+}
+
+section img{
+-webkit-border-radius: 8px;
+
+ max-width: 90%;
+ display: block;
+margin:0 auto;
+}
+
+section p{
+		margin:20px;
+		font-size:16px;
+		line-height:1.6em;	
+		color:#333;
+}
+
+aside p{
+	font-size: 10px;
+	color:#999;
+}
+
+@-webkit-keyframes anim {
+    0%   { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/*
+ビーコン画像の設定
+beaconクラス デフォルトのビーコン画像と大きさの指定
+within-regionクラス ビーコン領域に入ったときのビーコン画像の設定
+out-of-regionクラス ビーコン領域から出ているときのビーコン画像の設定
+visitedクラス 訪問済みビーコン領域のビーコン画像の設定
+*/
+.beacon {
+  background-image: url(images/beacon-off.png);
+  width: 32px;
+  height: 32px;
+  display:block;
+}
+
+.within-region  {
+  background-image: url(images/beacon-on.png);
+  -webkit-animation: anim 1s infinite;
+}
+
+.out-of-region  {
+  background-image: url(images/beacon-off.png);
+}
+
+.visited
+{
+  background-image: url(images/beacon-on.png);
+}
+
+/* ビーコン画像の位置設定 */
+.region1 {
+  position: absolute;
+  left: 250px;
+  top: 50px;
+}
+.region2 {
+  position: absolute;
+  left: 150px;
+  top: 150px;
+}

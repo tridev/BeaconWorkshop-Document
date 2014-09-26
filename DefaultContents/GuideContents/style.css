@@ -1,0 +1,184 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html,
+body,
+h1,
+p{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: normal;
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color:#858585;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+img{
+	border:none;
+}
+
+section h1{
+ 	margin: 20px 20px 10px;	
+	font-size:20px;	
+	 color:#999;
+}
+
+section h2{
+ 	margin: 20px 20px 10px;	
+	font-size:18px;	
+	color:#F66;
+}
+
+section img{
+-webkit-border-radius: 8px;
+
+ max-width: 90%;
+ display: block;
+margin:0 auto;
+}
+
+section p{
+		margin:20px;
+		font-size:16px;
+		line-height:1.6em;	
+		color:#333;
+}
+
+aside p{
+font-size: 10px;
+	color:#999;
+}
+
+@-webkit-keyframes anim {
+    0%   { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.beacon {
+	background-image: url(images/beacon-off.png);
+	width: 32px;
+	height: 32px;
+	display:block;
+}
+
+.within-region  {
+	background-image: url(images/beacon-on.png);
+  -webkit-animation: anim 1s infinite;
+}
+
+.out-of-region  {
+	background-image: url(images/beacon-off.png);
+}
+
+.visited
+{
+	background-image: url(images/beacon-on.png);
+}
+
+.region-1-101 {
+	position: absolute;
+	left: 110px;
+	top: 400px;
+}
+
+.region-1-102 {
+	position:absolute;
+	left: 54px;
+	top: 376px;
+}
+
+.region-1-103 {
+	position:absolute;
+	left: 96px;
+	top: 356px;
+}
+
+.region-1-104 {
+	position:absolute;
+	left: 126px;
+	top: 350px;
+}
+
+.region-1-105 {
+	position:absolute;
+	left: 192px;
+	top: 362px;
+}
+
+.region-1-106 {
+	position:absolute;
+	left: 136px;
+	top: 326px;
+}
+
+.region-1-107 {
+	position:absolute;
+	left: 180px;
+	top: 318px;
+}
+
+.region-1-108 {
+	position:absolute;
+	left: 202px;
+	top: 338px;
+}
+
+/*
+/* =iPhone 5+ （横）
+-----------------------------------------------------------------------------*/
+@media
+  only screen and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape),
+  only screen and (min--moz-device-pixel-ratio: 1.5) and (orientation: landscape),
+  only screen and (min-device-pixel-ratio: 1.5) and (orientation: landscape) {
+	.map {
+		zoom: 177.6%;
+	}
+}
+
+/*
+/* =iPhone 4S （横）
+-----------------------------------------------------------------------------*/
+@media
+    only screen and (min-device-width: 320px) 
+    and (max-device-width: 480px) 
+    and (-webkit-device-pixel-ratio: 2) 
+    and (device-aspect-ratio: 2/3)
+		and (orientation: landscape)
+{
+	.map {
+		zoom: 150%;
+	}
+}
+
+
+/*
+/* =iPad （縦）
+-----------------------------------------------------------------------------*/
+@media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait){
+	.map {
+		zoom: 240%;
+	}
+}
+
+/*
+/* =iPad （横）
+-----------------------------------------------------------------------------*/
+@media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: landscape) {
+	.map {
+		zoom: 320%;
+	}
+}

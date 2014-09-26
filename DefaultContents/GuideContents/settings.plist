@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Beacon UUID</key>
+	<string>F16A2B6B-9308-4406-AEC1-B5A605688378</string>
+	<key>Contents configuration file</key>
+	<string>contents.plist</string>
+	<key>Beacon configuration file</key>
+	<string>regions.plist</string>
+	<key>Main map HTML file</key>
+	<string>index.html</string>
+	<key>Completed HTML file</key>
+	<string>completed.html</string>
+</dict>
+</plist>
