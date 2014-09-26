@@ -7,6 +7,7 @@ App Storeで公開しているiOSアプリ「ビーコンワークショップ�
 
 * [使い方マニュアル](manual.md)
 * [インポートデータ仕様](Definitions.md)
+* [ユーザー定義データ・カスタマイズマニュアル](customize_manual.md)
 
 #####コンテンツアーカイブ
 * [アプリの初期コンテンツ(DefaultContents.zip)](DefaultContents.zip)
