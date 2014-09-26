@@ -18,9 +18,9 @@
 
 はじめにインポートデータで扱うファイルの形式について説明します。
 
-* #### プロパティリスト
+* **プロパティリスト**  
 プロパティリスト(Property List：以下 plist)は、OS XやiOSにおいてデータを格納するために用いられるファイル形式のひとつで、アップルにより[DTD](http://www.apple.com/DTDs/PropertyList-1.0.dtd)が定義されているXML形式のファイルです。BeaconWorkshopではビーコン情報やコンテンツ情報をカスタマイズする目的で使用します。plistファイルはXcodeに統合されたプロパティリストエディタで編集できるほか、一般的なテキストエディタでも編集可能です。(Windows環境でも動くplistエディタもいくつか存在するようです)
-* #### HTMLコンテンツ
+* **HTMLコンテンツ**  
 BeaconWorkshopで表示する情報はHTMLとしてマークアップされたファイルと、その関連ファイルです。アプリ内ではこのHTMLコンテンツをWebビューで表示するため、iPhoneやiPadのMobile Safariと同等の表示が可能です。ビーコン画像の表示制御等にはCSSを利用します。
 
 
@@ -51,8 +51,6 @@ BeaconWorkshopで表示する情報はHTMLとしてマークアップされた�
 
 ### <a name="folder_structure"></a>3.2 コンテンツのファイル構成
 GuideContentsフォルダ以下に関連ファイルを格納します。
-
-TODO: plistとかhtmlは自由におけるかどうかの説明
 
 #### 3.2.1 フォルダ分けしない場合のファイル構成
 ファイル数が少ない場合などはGuideContentsフォルダ以下にすべてのファイルを置いても良いでしょう。
@@ -94,7 +92,7 @@ GuideContents
 以下のKey-Value情報を辞書に格納します。
 
 | Key | Type | Default Value | Requirement | 説明 |
-|---|:---:|:---:|:-:|
+|---|:---:|:---:|:---:|:-:|
 | Beacon UUID| String | 65128774-D16C-4DC5-BF52-E1ECF4CF9C87| optional | 監視するビーコンのUUID (全ビーコン共通) |
 |Beacon configuration file| String | regions.plist | optional | ビーコン領域定義ファイルのplist名(拡張子なし) |
 |Contents configuration file| String | guides.plist | optional | 表示コンテンツ定義ファイルのplist名(拡張子なし) |
@@ -130,7 +128,7 @@ GuideContents
 以下のビーコン領域定義の辞書要素を監視領域の数だけ配列として持ちます。
 
 | Key | Type | Default Value | Requirement | 説明 |
-|---|:---:|:---:|:-:|
+|---|:---:|:---:|:---:|:-:|
 | identifier | String | なし | required | ビーコン領域の識別子。このファイル内において他の領域のidentifierと重複しないユニークな文字列。 |
 | major | Number | なし | required | 監視するビーコン領域のmajor番号 |
 | major | Number | なし | required | 監視するビーコン領域のminor番号 |
@@ -178,7 +176,7 @@ GuideContents
 以下の表示コンテンツ定義の辞書要素を監視領域の数だけ配列として持ちます。
 
 | Key | Type | Default Value | Requirement | 説明 |
-|---|:---:|:---:|:-:|
+|---|:---:|:---:|:---:|:-:|
 | Region identifier | String | なし | required | 反応させるビーコン領域の識別子 (ビーコン領域定義ファイルのidentifierキー)。このファイル内において他のコンテンツの識別子と重複しないこと。 |
 | Title | String | なし | optional | ビーコン領域を表す文字列。ナビゲーションバーに表示される。 |
 | Content URL | String | なし | optional | ビーコンに反応して表示されるコンテンツのURL。settings.plistのあるディレクトリからの相対パスで指定する。リモートのURLも指定可能。 |
