@@ -7,12 +7,14 @@
 * 監視するビーコン領域の指定
 * ビーコン領域と表示コンテンツの対応付け
 
-コンテンツに含まれるファイルは設定ファイルとガイドコンテンツファイルに分類できます。設定ファイルはプロパティリストと呼ばれるXMLベースのテキストファイルで記述されます。表示コンテンツファイルは一般的なWebページであり、HTMLファイルとそれにリンクする画像ファイルやCSSファイル等を含みます。
+コンテンツに含まれるファイルは設定ファイルとガイドコンテンツファイルに分類できます。設定ファイルはプロパティリストと呼ばれるXMLベースのテキストファイル、あるいはJSONフォーマットで記述されます。表示コンテンツファイルは一般的なWebページであり、HTMLファイルとそれにリンクする画像ファイルやCSSファイル等を含みます。
 
 ![図 1-1. クラウドストレージからのインポート](images/summary.png "クラウドストレージからのインポート")
 
 
 これらのコンテンツ群をZIPアーカイブしたものがインポートデータ本体になります。作成したインポートデータをクラウドストレージに置くことによりアプリから取り込んで利用することができます。
+
+アプリバージョン 1.1.0 からはインポートデータをAirDrop経由でアプリに転送できるようになりました。
 
 ## 2. インポートデータで扱うファイル
 
@@ -20,6 +22,11 @@
 
 * **プロパティリスト**  
 プロパティリスト(Property List：以下 plist)は、OS XやiOSにおいてデータを格納するために用いられるファイル形式のひとつで、アップルにより[DTD](http://www.apple.com/DTDs/PropertyList-1.0.dtd)が定義されているXML形式のファイルです。BeaconWorkshopではビーコン情報やコンテンツ情報をカスタマイズする目的で使用します。plistファイルはXcodeに統合されたプロパティリストエディタで編集できるほか、一般的なテキストエディタでも編集可能です。(Windows環境でも動くplistエディタもいくつか存在するようです)
+* **JSON**
+JSON(JavaScript Object Notation)はテキストベースの軽量データフォーマットです。XMLベースのプロパティリストに比べて記述が容易であり理解しやすいデータフォーマットです。
+
+BeaconWorkshopでは設定ファイルをプロパティリストまたはJSONで記述します。ファイルごとに混在させることも可能です。使いやすい形式を選んで使用してください。
+
 * **HTMLコンテンツ**  
 BeaconWorkshopで表示する情報はHTMLとしてマークアップされたファイルと、その関連ファイルです。アプリ内ではこのHTMLコンテンツをWebビューで表示するため、iPhoneやiPadのMobile Safariと同等の表示が可能です。ビーコン画像の表示制御等にはCSSを利用します。
 
@@ -86,21 +93,22 @@ GuideContents
 ```
 
 ### <a name="settings"></a>3.3 コンテンツ情報定義ファイル
-コンテンツ情報定義ファイルは、インポートデータの基本情報を定義するplistファイルです。  
-ファイル名は固定で settings.plist を使用します。
+コンテンツ情報定義ファイルは、インポートデータの基本情報を指定するための定義ファイルです。ファイル名は固定で、プロパティリストの場合は settings.plist 、JSONの場合は settings.json を使用します。settings.plistとsettings.jsonが存在する場合は、plistを優先して読み込みます。
 
 以下のKey-Value情報を辞書に格納します。
 
 | Key | Type | Default Value | Requirement | 説明 |
 |---|:---:|:---:|:---:|:-:|
 | Beacon UUID| String | 65128774-D16C-4DC5-BF52-E1ECF4CF9C87| optional | 監視するビーコンのUUID (全ビーコン共通) |
-|Beacon configuration file| String | regions.plist | optional | ビーコン領域定義ファイルのplist名(拡張子なし) |
-|Contents configuration file| String | guides.plist | optional | 表示コンテンツ定義ファイルのplist名(拡張子なし) |
-|Main map HTML file| String | index.html | optional | メインマップ画面のHTMLファイル名(拡張子なし) |
-|Completed HTML file| String | completed.html | optional | コンプリート画面のHTMLファイル名(拡張子なし)|
+|Beacon configuration file| String | regions.plist | optional | ビーコン領域定義ファイル名 |
+|Contents configuration file| String | guides.plist | optional | 表示コンテンツ定義ファイル名 |
+|Main map HTML file| String | index.html | optional | メインマップ画面のHTMLファイル名 |
+|Completed HTML file| String | completed.html | optional | コンプリート画面のHTMLファイル名 |
 
 ####定義例
-デフォルト設定の settings.plist ファイルは以下のように定義されるでしょう。
+コンテンツ情報定義ファイルの定義例を以下に示します。
+
+プロパティリスト
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -121,9 +129,22 @@ GuideContents
 </plist>
 ```
 
+JSON
+
+```json
+{
+  "Beacon UUID": "65128774-D16C–4DC5-BF52-E1ECF4CF9C87",
+  "Contents configuration file": "guides.json",
+  "Beacon configuration file": "regions.json",
+  "Main map HTML file": "index.html",
+  "Completed HTML file": "completed.html"
+}
+```
+
+
 ### <a name="regions"></a>3.4 ビーコン領域定義ファイル
-ビーコン領域定義ファイルでは監視するビーコン領域を登録するためのplistファイルです。
-ファイル名はコンテンツ情報定義ファイルで指定したBeacon Settings plist nameキーの値に拡張子plistを付加したものになります(未定義ならデフォルトの regions.plist が使われます)。
+ビーコン領域定義ファイルでは監視するビーコン領域を登録するための定義ファイルです。
+ファイル名はコンテンツ情報定義ファイルで指定したBeacon configuration fileキーの値になります(未定義ならデフォルトファイル名 regions.plist が使われます)。
 
 以下のビーコン領域定義の辞書要素を監視領域の数だけ配列として持ちます。
 
@@ -134,13 +155,15 @@ GuideContents
 | major | Number | なし | required | 監視するビーコン領域のminor番号 |
 
 ####定義例
-以下のようなidentifier, major, minor 情報を持つ２つのビーコン領域が定義されたplistの記述例を示します。
+以下のようなidentifier, major, minor 情報を持つ２つのビーコン領域を定義した場合の記述例を示します。
 
 | identifier | major | minor |
 |:-:|:-:|:-:|
 | 1 | 1 | 1 |
 | 2 | 1 | 2 |
 
+
+プロパティリスト
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -167,11 +190,28 @@ GuideContents
 </plist>
 ```
 
-配列(array)の要素に辞書(dict)が格納されます。
+JSON
+
+```json
+[
+	{
+		"identifier": "1",
+		"major": 1,
+		"minor": 1
+	},
+	{
+		"identifier": "2",
+		"major": 1,
+		"minor": 2
+	}
+]
+```
+
+配列(array)の要素に辞書(dict)が格納されることに注意してください。
 
 ### <a name="guides"></a>3.5 表示コンテンツ定義ファイル
-表示コンテンツ定義ファイルは、ビーコンに反応した際に表示するコンテンツの情報を定義したplistファイルです。
-ファイル名はコンテンツ情報定義ファイルで指定したContents plist nameキーの値に拡張子plistを付加したものになります(未定義ならデフォルトの guides.plist が使われます)。
+表示コンテンツ定義ファイルは、ビーコンに反応した際に表示するコンテンツの情報を登録するための定義ファイルです。
+ファイル名はコンテンツ情報定義ファイルで指定したContents configuration fileキーの値になります(未定義ならデフォルトの guides.plist が使われます)。
 
 以下の表示コンテンツ定義の辞書要素を監視領域の数だけ配列として持ちます。
 
@@ -183,12 +223,14 @@ GuideContents
 | Speech text | String | なし | optional | Content URLキーで指定したコンテンツが表示されたときにTTSエンジンが読み上げるテキスト |
 
 ####定義例
-以下のような値を持つ２つのコンテンツ情報が定義されたplistの記述例を示します。
+以下のような値を持つ２つのコンテンツ情報が定義された場合の記述例を示します。
 
 | Region identifier | Title | Content URL | Speech text |
 |:-:|:-:|:-:|:-:|
 | 1 | ビーコン１ | region1.html | なし |
 | 2 | ビーコン２ | region2.html | なし |
+
+プロパティリスト
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -215,7 +257,24 @@ GuideContents
 </plist>
 ```
 
-配列(array)の要素に辞書(dict)が格納されます。
+JSON
+
+```
+[
+	{
+		"Region identifier": "1",
+		"Title": "ビーコン１",
+		"Content URL": "region1.html",
+	},
+	{
+		"Region identifier": "2",
+		"Title": "ビーコン２",
+		"Content URL": "region2.html",
+	}
+]
+```
+
+配列(array)の要素に辞書(dict)が格納されることに注意してください。
 
 
 ## 4. HTMLコンテンツ

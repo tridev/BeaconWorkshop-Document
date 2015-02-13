@@ -1,0 +1,42 @@
+[
+	{
+		"Region identifier": "region-id:1-101",
+		"Title": "南出入口",
+		"Content URL": "1-101.html"
+	},
+	{
+		"Region identifier": "region-id:1-102",
+		"Title": "ロビー",
+		"Content URL": "1-102.html"
+	},
+	{
+		"Region identifier": "region-id:1-103",
+		"Title": "モバイルコア",
+		"Content URL": "1-103.html"
+	},
+	{
+		"Region identifier": "region-id:1-104",
+		"Title": "Fab-core",
+		"Content URL": "1-104.html"
+	},
+	{
+		"Region identifier": "region-id:1-105",
+		"Title": "東正面出入口",
+		"Content URL": "1-105.html"
+	},
+	{
+		"Region identifier": "region-id:1-106",
+		"Title": "西出入口",
+		"Content URL": "1-106.html"
+	},
+	{
+		"Region identifier": "region-id:1-107",
+		"Title": "WC",
+		"Content URL": "1-107.html"
+	},
+	{
+		"Region identifier": "region-id:1-108",
+		"Title": "EVホール",
+		"Content URL": "1-108.html"
+	}
+]

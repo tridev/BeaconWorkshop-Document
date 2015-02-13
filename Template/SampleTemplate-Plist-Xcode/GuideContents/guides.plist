@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Region identifier</key>
+		<string>id1</string>
+		<key>Title</key>
+		<string>ビーコン１</string>
+		<key>Content URL</key>
+		<string>region1.html</string>
+		<key>Speech text</key>
+		<string>ビーコン１のコンテンツだよ。</string>
+	</dict>
+	<dict>
+		<key>Region identifier</key>
+		<string>id2</string>
+		<key>Title</key>
+		<string>ビーコン２</string>
+		<key>Content URL</key>
+		<string>region2.html</string>
+		<key>Speech text</key>
+		<string>ビーコン２のコンテンツだよ。</string>
+	</dict>
+	<dict>
+		<key>Region identifier</key>
+		<string>id3</string>
+		<key>Title</key>
+		<string>ビーコン３</string>
+		<key>Content URL</key>
+		<string>region3.html</string>
+		<key>Speech text</key>
+		<string>ビーコン３のコンテンツだよ。</string>
+	</dict>
+	<dict>
+		<key>Region identifier</key>
+		<string>id4</string>
+		<key>Title</key>
+		<string>ビーコン４</string>
+		<key>Content URL</key>
+		<string>region4.html</string>
+		<key>Speech text</key>
+		<string>ビーコン４のコンテンツだよ。</string>
+	</dict>
+	<dict>
+		<key>Region identifier</key>
+		<string>id5</string>
+		<key>Title</key>
+		<string>ビーコン５</string>
+		<key>Content URL</key>
+		<string>region5.html</string>
+		<key>Speech text</key>
+		<string>ビーコン５のコンテンツだよ。</string>
+	</dict>
+	<dict>
+		<key>Region identifier</key>
+		<string>id6</string>
+		<key>Title</key>
+		<string>ビーコン６</string>
+		<key>Content URL</key>
+		<string>region6.html</string>
+		<key>Speech text</key>
+		<string>ビーコン６のコンテンツだよ。</string>
+	</dict>
+	<dict>
+		<key>Region identifier</key>
+		<string>id7</string>
+		<key>Title</key>
+		<string>ビーコン７</string>
+		<key>Content URL</key>
+		<string>region7.html</string>
+		<key>Speech text</key>
+		<string>ビーコン７のコンテンツだよ。</string>
+	</dict>
+	<dict>
+		<key>Region identifier</key>
+		<string>id8</string>
+		<key>Title</key>
+		<string>ビーコン８</string>
+		<key>Content URL</key>
+		<string>region8.html</string>
+		<key>Speech text</key>
+		<string>ビーコン８のコンテンツだよ。</string>
+	</dict>
+	<dict>
+		<key>Region identifier</key>
+		<string>id9</string>
+		<key>Title</key>
+		<string>ビーコン９</string>
+		<key>Content URL</key>
+		<string>region9.html</string>
+		<key>Speech text</key>
+		<string>ビーコン９のコンテンツだよ。</string>
+	</dict>
+</array>
+</plist>

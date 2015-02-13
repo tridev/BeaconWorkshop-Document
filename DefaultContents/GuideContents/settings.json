@@ -1,0 +1,7 @@
+{
+  "Beacon UUID": "F16A2B6B-9308-4406-AEC1-B5A605688378",
+  "Contents configuration file": "contents.json",
+  "Beacon configuration file": "regions.json",
+  "Main map HTML file": "index.html",
+  "Completed HTML file": "completed.html"
+}

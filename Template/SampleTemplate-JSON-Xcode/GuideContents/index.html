@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>メインマップ</title>
+  </head>
+  <body>
+    <div class="map">
+      <img src="images/background.png" alt="背景画像">
+      <!--
+      * ビーコン画像はaタグ(アンカータグ)の背景画像として表示される
+      * 背景画像の指定や表示位置は、スタイルシート(style.css)側で指定する
+      * id属性にビーコン領域のIDを指定すると、class属性に以下のクラスが付加(あるいは削除)される
+        ビーコン領域外 -> out-of-region
+        ビーコン領域内 -> within-region
+        一度でもビーコン領域に訪れた -> visited
+        例) id1のIDを持つビーコン領域に入った場合のclassは以下のようになる
+        <a href="region1.html" id="id1" class="beacon region1 within-region visited">
+      -->
+      <a href="region1.html" id="region-id:1" class="beacon region1"></a>
+      <a href="region2.html" id="region-id:2" class="beacon region2"></a>
+      <a href="region3.html" id="region-id:3" class="beacon region3"></a>
+      <a href="region4.html" id="region-id:4" class="beacon region4"></a>
+      <a href="region5.html" id="region-id:5" class="beacon region5"></a>
+      <a href="region6.html" id="region-id:6" class="beacon region6"></a>
+      <a href="region7.html" id="region-id:7" class="beacon region7"></a>
+      <a href="region8.html" id="region-id:8" class="beacon region8"></a>
+      <a href="region9.html" id="region-id:9" class="beacon region9"></a>
+    </div>
+  </body>
+</html>

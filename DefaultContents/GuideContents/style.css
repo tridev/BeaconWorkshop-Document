@@ -24,42 +24,43 @@ img{
 	border:none;
 }
 
-section h1{
+article h1{
  	margin: 20px 20px 10px;	
 	font-size:20px;	
-	 color:#999;
+	color:#999;
 }
 
-section h2{
+article h2{
  	margin: 20px 20px 10px;	
 	font-size:18px;	
 	color:#F66;
 }
 
 section img{
--webkit-border-radius: 8px;
+  -webkit-border-radius: 8px;
 
- max-width: 90%;
- display: block;
-margin:0 auto;
+  max-width: 90%;
+  display: block;
+  margin:0 auto;
 }
 
 section p{
-		margin:20px;
-		font-size:16px;
-		line-height:1.6em;	
-		color:#333;
+  margin:20px;
+  font-size:16px;
+  line-height:1.6em;	
+  color:#333;
 }
 
-aside p{
-font-size: 10px;
-	color:#999;
+aside {
+  margin:20px;
+  font-size: 10px;
+  color:#999;
 }
 
 @-webkit-keyframes anim {
-    0%   { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+  0%   { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .beacon {
@@ -131,54 +132,59 @@ font-size: 10px;
 	top: 338px;
 }
 
-/*
-/* =iPhone 5+ （横）
------------------------------------------------------------------------------*/
-@media
-  only screen and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape),
-  only screen and (min--moz-device-pixel-ratio: 1.5) and (orientation: landscape),
-  only screen and (min-device-pixel-ratio: 1.5) and (orientation: landscape) {
-	.map {
-		zoom: 177.6%;
-	}
-}
 
-/*
-/* =iPhone 4S （横）
------------------------------------------------------------------------------*/
-@media
-    only screen and (min-device-width: 320px) 
-    and (max-device-width: 480px) 
-    and (-webkit-device-pixel-ratio: 2) 
-    and (device-aspect-ratio: 2/3)
-		and (orientation: landscape)
-{
-	.map {
-		zoom: 150%;
-	}
-}
-
-
-/*
-/* =iPad （縦）
------------------------------------------------------------------------------*/
-@media only screen
-    and (min-device-width: 768px)
-    and (max-device-width: 1024px)
-    and (orientation: portrait){
-	.map {
-		zoom: 240%;
-	}
-}
-
-/*
-/* =iPad （横）
------------------------------------------------------------------------------*/
-@media only screen
-    and (min-device-width: 768px)
-    and (max-device-width: 1024px)
-    and (orientation: landscape) {
+/* iPad Landscape */
+@media screen and (max-width: 1024px) {
 	.map {
 		zoom: 320%;
 	}
 }
+/* iPad Portrait */
+@media screen and (max-width: 768px) {
+	.map {
+		zoom: 240%;
+	}
+}
+/* iPhone 6 Plus - Landscape */
+@media screen and (max-width: 736px) {
+	.map {
+		zoom: 230%;
+	}
+}
+/* iPhone 6 - Landscape */
+@media screen and (max-width: 667px) {
+	.map {
+		zoom: 208.4%;
+	}
+}
+/* iPhone 5 - Landscape */
+@media screen and (max-width: 568px) {
+	.map {
+		zoom: 177.6%;
+	}
+}
+/* iPhone 4 - Landscape */
+@media screen and (max-width: 480px) {
+	.map {
+		zoom: 150%;
+	}
+}
+/* iPhone 6 Plus - Portrait */
+@media screen and (max-width: 414px) {
+	.map {
+		zoom: 129.3%;
+	}
+}
+/* iPhone 6 - Portrait */
+@media screen and (max-width: 375px) {
+	.map {
+		zoom: 117.1%;
+	}
+}
+/* iPhone 3.5, 4inch - Portrait */
+@media screen and (max-width: 320px) {
+	.map {
+		zoom: 100%;
+	}
+}
+

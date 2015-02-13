@@ -1,0 +1,47 @@
+[
+	{
+		"identifier": "region-id:1",
+		"major": 1,
+		"minor": 101
+	},
+	{
+		"identifier": "region-id:2",
+		"major": 1,
+		"minor": 102
+	},
+	{
+		"identifier": "region-id:3",
+		"major": 1,
+		"minor": 103
+	},
+	{
+		"identifier": "region-id:4",
+		"major": 1,
+		"minor": 104
+	},
+	{
+		"identifier": "region-id:5",
+		"major": 1,
+		"minor": 105
+	},
+	{
+		"identifier": "region-id:6",
+		"major": 1,
+		"minor": 106
+	},
+	{
+		"identifier": "region-id:7",
+		"major": 1,
+		"minor": 107
+	},
+	{
+		"identifier": "region-id:8",
+		"major": 1,
+		"minor": 108
+	},
+	{
+		"identifier": "region-id:9",
+		"major": 1,
+		"minor": 109
+	}
+]

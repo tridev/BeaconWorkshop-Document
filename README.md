@@ -11,7 +11,12 @@ App Storeで公開しているiOSアプリ「ビーコンワークショップ�
 
 #####コンテンツアーカイブ
 * [アプリの初期コンテンツ(DefaultContents.zip)](DefaultContents.zip)
-* [テンプレート用(Template.zip)](Template.zip)
+
+以下テンプレートはスタンプラリーを模した内容になっています。  
+Xcodeのワークスペースファイルが含まれますが、実際のテンプレートはGuideContentsフォルダ以下となります。
+
+* [サンプルテンプレート Plist版(SampleTemplate-Plist-Xcode.zip)](SampleTemplate-Plist-Xcode.zip)
+* [サンプルテンプレート JSON版(SampleTemplate-JSON-Xcode.zip)](SampleTemplate-JSON-Xcode.zip)
 
 #####リンク
 - [ビーコンワークショップ 有料版](https://itunes.apple.com/jp/app/bikonwakushoppu/id908171923?mt=8)

@@ -1,0 +1,268 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html,
+body,
+h1,
+p{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: normal;
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color:#858585;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+img{
+	border:none;
+}
+
+article {
+  margin: 20px;
+}
+
+article h1{
+  margin-top: 10px;	
+  font-size:20px;	
+  color:#999;
+}
+
+article h2 {
+  margin-top: 10px;	
+  font-size:18px;	
+	color:#F66;
+}
+
+section img{
+  -webkit-border-radius: 8px;
+  max-width: 90%;
+  display: block;
+  margin:0 auto;
+}
+
+section p{
+  font-size:16px;
+  line-height:1.6em;	
+  color:#333;
+}
+
+aside {
+	font-size: 10px;
+	color:#999;
+}
+
+@-webkit-keyframes anim {
+  0%   { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/*
+全ビーコン共通のスタイル
+beaconクラス デフォルトのビーコン画像と大きさの指定
+within-regionクラス ビーコン領域に入ったときのビーコン画像の設定
+out-of-regionクラス ビーコン領域から出ているときのビーコン画像の設定
+visitedクラス 訪問済みビーコン領域のビーコン画像の設定
+*/
+.beacon {
+  width: 91px;	/* ビーコン画像の幅(画像の実サイズではなく、表示領域の大きさ) */
+  height: 91px;	/* ビーコン画像の高さ(画像の実サイズではなく、表示領域の大きさ) */
+  background-size: contain;
+  display:block;
+}
+
+/* 全ビーコン共通のスタイル(ビーコン領域内) */
+.within-region  {
+  -webkit-animation: anim 1s infinite;
+}
+
+/* 全ビーコン共通のスタイル(ビーコン領域外) */
+.out-of-region  {
+}
+
+/* 全ビーコン共通のスタイル(訪問済み:一度でもビーコン領域に入っている場合) */
+.visited {
+}
+
+/* ビーコン画像の背景や位置 */
+.region1 {
+  background-image: url(images/1-off.png);	/* ビーコン画像 */
+  position: absolute;
+  left: 12px;	/* ビーコン画像の表示位置(x座標) */
+  top: 12px;	/* ビーコン画像の表示位置(y座標) */
+}
+
+/* ビーコンの領域内にいるとき  */
+.region1.within-region {
+  background-image: url(images/1-on.png);
+}
+
+/* ビーコンの領域外にいるとき */
+.region1.out-of-region {
+  background-image: url(images/1-off.png);
+}
+
+/* 一度でもビーコン領域に訪れたことがある */
+.region1.visited {
+  background-image: url(images/1-on.png);
+}
+
+
+.region2 {
+  background-image: url(images/2-off.png);
+  position: absolute;
+  left: 115px;
+  top: 12px;
+}
+
+.region2.within-region {
+   background-image: url(images/2-on.png);
+}
+
+.region2.out-of-region {
+  background-image: url(images/2-off.png);
+}
+
+.region2.visited {
+  background-image: url(images/2-on.png);
+}
+
+.region3 {
+  background-image: url(images/3-off.png);
+  position: absolute;
+  left: 218px;
+  top: 12px;
+}
+
+.region3.within-region {
+  background-image: url(images/3-on.png);
+}
+
+.region3.out-of-region {
+  background-image: url(images/3-off.png);
+}
+
+.region3.visited {
+  background-image: url(images/3-on.png);
+}
+
+.region4 {
+  background-image: url(images/4-off.png);
+  position: absolute;
+  left: 12px;
+  top: 115px;
+}
+
+.region4.within-region {
+  background-image: url(images/4-on.png);
+}
+
+.region4.out-of-region {
+  background-image: url(images/4-off.png);
+}
+
+.region4.visited {
+  background-image: url(images/4-on.png);
+}
+
+.region5 {
+  background-image: url(images/5-off.png);
+  position: absolute;
+  left: 115px;
+  top: 115px;
+}
+
+.region5.within-region {
+  background-image: url(images/5-on.png);
+}
+
+.region5.out-of-region {
+  background-image: url(images/5-off.png);
+}
+
+.region5.visited {
+  background-image: url(images/5-on.png);
+}
+
+.region6 {
+  background-image: url(images/6-off.png);
+  position: absolute;
+  left: 218px;
+  top: 115px;
+}
+
+.region6.within-region {
+  background-image: url(images/6-on.png);
+}
+
+.region6.out-of-region {
+  background-image: url(images/6-off.png);
+}
+
+.region6.visited {
+  background-image: url(images/6-on.png);
+}
+
+.region7 {
+  background-image: url(images/7-off.png);
+  position: absolute;
+  left: 12px;
+  top: 218px;
+}
+
+.region7.within-region {
+  background-image: url(images/7-on.png);
+}
+
+.region7.out-of-region {
+  background-image: url(images/7-off.png);
+}
+
+.region7.visited {
+  background-image: url(images/7-on.png);
+}
+
+.region8 {
+  background-image: url(images/8-off.png);
+  position: absolute;
+  left: 115px;
+  top: 218px;
+}
+
+.region8.within-region {
+  background-image: url(images/8-on.png);
+}
+
+.region8.out-of-region {
+  background-image: url(images/8-off.png);
+}
+
+.region8.visited {
+  background-image: url(images/8-on.png);
+}
+
+.region9 {
+  background-image: url(images/9-off.png);
+  position: absolute;
+  left: 218px;
+  top: 218px;
+}
+
+.region9.within-region {
+  background-image: url(images/9-on.png);
+}
+
+.region9.out-of-region {
+  background-image: url(images/9-off.png);
+}
+
+.region9.visited {
+  background-image: url(images/9-on.png);
+}

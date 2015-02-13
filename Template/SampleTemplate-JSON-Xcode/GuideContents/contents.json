@@ -1,0 +1,56 @@
+[
+	{
+		"Region identifier": "region-id:1",
+		"Title": "ビーコン１",
+		"Content URL": "region1.html",
+		"Speech text": "ビーコン１のコンテンツだよ。"
+	},
+	{
+		"Region identifier": "region-id:2",
+		"Title": "ビーコン２",
+		"Content URL": "region2.html",
+		"Speech text": "ビーコン２のコンテンツだよ。"
+	},
+	{
+		"Region identifier": "region-id:3",
+		"Title": "ビーコン３",
+		"Content URL": "region3.html",
+		"Speech text": "ビーコン３のコンテンツだよ。"
+	},
+	{
+		"Region identifier": "region-id:4",
+		"Title": "ビーコン４",
+		"Content URL": "region4.html",
+		"Speech text": "ビーコン４のコンテンツだよ。"
+	},
+	{
+		"Region identifier": "region-id:5",
+		"Title": "ビーコン５",
+		"Content URL": "region5.html",
+		"Speech text": "ビーコン５のコンテンツだよ。"
+	},
+	{
+		"Region identifier": "region-id:6",
+		"Title": "ビーコン６",
+		"Content URL": "region6.html",
+		"Speech text": "ビーコン６のコンテンツだよ。"
+	},
+	{
+		"Region identifier": "region-id:7",
+		"Title": "ビーコン７",
+		"Content URL": "region7.html",
+		"Speech text": "ビーコン７のコンテンツだよ。"
+	},
+	{
+		"Region identifier": "region-id:8",
+		"Title": "ビーコン８",
+		"Content URL": "region8.html",
+		"Speech text": "ビーコン８のコンテンツだよ。"
+	},
+	{
+		"Region identifier": "region-id:9",
+		"Title": "ビーコン９",
+		"Content URL": "region9.html",
+		"Speech text": "ビーコン９のコンテンツだよ。"
+	}
+]
